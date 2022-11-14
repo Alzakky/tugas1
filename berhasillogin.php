@@ -2,7 +2,7 @@
  
 session_start();
  
-if (!(isset($_SESSION['name']) && isset($_SESSION['id']) && isset($_SESSION['nis']))) {
+if (!(isset($_SESSION['name']) || isset($_SESSION['id']) || isset($_SESSION['nis']))) {
 	header('Location: index.php');
 }
  
