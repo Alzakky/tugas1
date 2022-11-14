@@ -248,7 +248,7 @@ if (isset($_POST['simpan'])) { //untuk create
                     </thead>
                     <tbody>
                         <?php
-                        $sql2   = "select * from siswa WHERE nis=".$_SESSION['nis']." order by id desc";
+                        $sql2   = "select * from siswa WHERE nis='".$_SESSION['nis']."' order by id desc";
                         $q2     = mysqli_query($conn, $sql2);
                         $urut   = 1;
                         while ($r2 = mysqli_fetch_array($q2)) {

@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $nis = $_POST['nis'];
     $password = ($_POST['password']);
  
-    $sql = "SELECT * FROM users WHERE nis=".$nis." AND password=".$password."";
+    $sql = "SELECT * FROM users WHERE nis='".$nis."' AND password='".$password."'";
     $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
