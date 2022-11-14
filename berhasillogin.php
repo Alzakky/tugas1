@@ -2,8 +2,8 @@
  
 session_start();
  
-if (!isset($_SESSION['username'])) {
-    header("Location: indexx.php");
+if (!(isset($_SESSION['name']) && isset($_SESSION['id']) && isset($_SESSION['nis']))) {
+	header('Location: index.php');
 }
  
 ?>
